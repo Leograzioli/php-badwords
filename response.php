@@ -14,18 +14,25 @@ $censure_word = $_GET["censure"];
 <body>
 
     <!-- print original txt -->
+    <h2>original text</h2>
     <p>
-        <h2>original text</h2>
-        <?php echo $text_input . " the text length is: " . strlen($text_input) . " char"?>
+        <?php echo $text_input?>
     </p>
+    <h5>
+        <?php echo "the text length is: " . strlen($text_input) . " char" ?>
+    </h5>
 
     <?php $replace_txt = str_replace($censure_word, "***", $text_input) ?>
     
     <!-- print censured txt -->
+    <h2>censured text</h2>
+
     <p>
-        <h2>censured text</h2>
-        <?php echo $replace_txt . " the text length is: " . strlen($replace_txt) . " char"?>
+        <?php echo $replace_txt ?>
     </p>
+    <h5>
+        <?php  echo "the text length is: " . strlen($replace_txt) . " char"?></h5>
+    </h5>
 
     <a href="index.php">Return</a>
         
